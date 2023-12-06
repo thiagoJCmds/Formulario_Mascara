@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+} 
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #b4b0b0;
+
+}
+
+form{
+    max-width: 500px;
+    margin-top: 25px;
+}
+
+.campo{
+    margin-bottom: 10px;
+  
+}
+
+.campo input{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 23px;
+    width: 400px;
+
+}
+.campo label {
+font-weight: bold;
+}
+
+h1{
+    text-align: center;
+}
+
+button{
+    width: 120px;
+    margin-top: 10px;
+    height: 23px;
+    border-radius: 4px;
+    background-color: #7cc77c;
+    color: #423f3f;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+}
+
