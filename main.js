@@ -1,19 +1,10 @@
 $(document).ready(function () {
   
-  $("#telefone").mask('(00) 00000-0000')
-  $("#cpf").mask("000.000.000-92")
-  $("#cep").mask("00.000-000")
+  $("#telefone").mask('(00) 00000-0000');
+  $("#cpf").mask("000.000.000-00");
+  $("#cep").mask("00.000-000");
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    $("form").validate({
+      $("form").validate({
         rules: {
             nome:{
                 required: true
@@ -52,34 +43,37 @@ $(document).ready(function () {
     
     $("button").click("submit", function (e){
 
-        e.preventDefault()
+        e.preventDefault();
+
+        $("p.error-message").remove();
 
         
-        const nomeCompleto = $("#nome").val()
-        const nomeValido = nomeCompleto.split(" ").length >=2
+        const nomeCompleto = $("#nome").val();
+        const nomeValido = nomeCompleto.split(" ").length >=2;
 
-        if (nomeValido === false) {
+        if (!nomeValido) {
             
-            const pN = $(`<p id='p1'>Preencha com o nome completo</p>`).appendTo("#campo1")
+            $("<p class='error-message'>Preencha com o nome completo</p>").appendTo("#campo1");
           
             
         }
        
-        else {
-            $("#p1").hide(); 
-        }    
-        const endereçoCompleto = $("#endereço").val()
-        const endereçoValido = endereçoCompleto.split(" ").length >=2
-        if (endereçoValido === false) {
+               
+        const endereçoCompleto = $("#endereço").val();
+        const endereçoValido = endereçoCompleto.split(" ").length >=2;
+        
+        
+        if (!endereçoValido) {
             
-             const pE = $(`<p id="p2">Preencha com o endereço completo</p>`).appendTo("#campo2")
+            $('<p class="error-message">Preencha com o endereço completo</p>').appendTo("#campo2");
             
         }
-        else {$("#p2").remove()}
-      
         
-        console.log("ok")
+        if ($("p.error-message").length === 0) {
+        
+            $("form")[0].reset();
+        }
       
-    });
+      });
     });
 

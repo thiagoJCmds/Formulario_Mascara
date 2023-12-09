@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #b4b0b0;
+    background-color: #eeeaea;
 
 }
 
@@ -26,11 +26,11 @@ form{
 }
 
 .campo input{
-
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 23px;
+    height: 35px;
     width: 400px;
 
 }
@@ -40,15 +40,18 @@ font-weight: bold;
 
 h1{
     text-align: center;
+    background-color: #fff;
+    border: solid 1px #000;
 }
 
 button{
     width: 120px;
     margin-top: 10px;
-    height: 23px;
+    height: 35px;
+    width: 400px;
     border-radius: 4px;
     background-color: #7cc77c;
-    color: #423f3f;
+    color: #080808;
     font-family: Roboto, sans-serif;
     font-weight: bold;
 }
